@@ -1,9 +1,8 @@
 {
   "name": "Telegram",
   "description": "Telegram Web App.\nMore info & source code here: https://github.com/zhukov/webogram",
-  "version": "0.5.7",
+  "version": "0.5.7.1",
   "type": "privileged",
-  "cursor": true,
   "ime_default_softkey_bar": true,
   "launch_path": "/index.html",
   "developer": {
@@ -19,8 +18,11 @@
     "push-register": "/index.html"
   }, {
     "notification": "/index.html"
+  }, {
+    "serviceworker-notification": "/index.html"
   }],
   "permissions": {
+    "spatialnavigation-app-manage": {},
     "desktop-notification": {
       "description": "Required to show new message notifications"
     },
@@ -46,7 +48,9 @@
     "device-storage:videos": {
     "description": "Required for videos download",
       "access": "createonly"
-    }
+    },
+    "serviceworker": {},
+    "notifications": {}
   },
   "activities": {
     "share": {
